@@ -32,6 +32,16 @@
 button:hover{
     background-color: rgb(14, 70, 255);
 }
+.botaoC{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(252, 78, 78);
+    border: none;
+    color: white;
+    margin: 3px;
+}
 
 #resultado{
     background-color: aliceblue;
@@ -43,4 +53,14 @@ button:hover{
     text-align: right;
     padding: 5px;
  
+}
+
+#balao{
+    position: absolute;
+    background-color: rgba(137, 43, 226, 0.4);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px;
 }
