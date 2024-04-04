@@ -1,0 +1,65 @@
+.calculadora {
+    background-color: var(--cor-azul-pastel);
+    margin: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 300px;
+    height: 425px;
+}
+.calculadora__tela_resultado {
+    font-size: 50px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-branco);
+    text-align: end;
+}
+.calculadora__tela_conta{
+    font-size: 25px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-cinza);
+    text-align: end;
+}
+
+.calculadora__divisoria{
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: rgb(0, 0, 0) 0px 3px 8px;
+}
+
+.calculadora__botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.botao {
+    background-color: var(--cor-azul-pastel);
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 1em;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    color: var(--cor-azul-escuro);
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+}
+.botao:hover{
+    background-color: var(--cor-azul);
+}
+.botao:active{
+    background-color: var(--cor-azul-claro);
+}
+#limpar {
+    background-color: var(--cor-azul);
+    color: var(--cor-azul-pastel);
+}
+#igual {
+    background-color: var(--cor-azul);
+    grid-column: span 2;
+    color: var(--cor-azul-pastel);
+}
+#igual:hover, #limpar:hover{
+    background-color: var(--cor-azul-escuro);
+}
+#igual:active, #limpar:active{
+    background-color: var(--cor-azul-claro);
+}

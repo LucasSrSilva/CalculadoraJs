@@ -1,44 +1,42 @@
-function insert(num){
-    var resultado = document.getElementById('resultado').innerHTML;
-    if (('+-*/').includes(resultado.slice(-1)) && '+-*/'.includes(num)) {
-        return;
-    }
-    document.getElementById('resultado').innerHTML += num;
+function inserirNum(num){
+    document.getElementById("tela-conta").innerHTML += num;
 }
 
-function limpar(){
-    document.getElementById('resultado').innerHTML = "";
+function inserirOperador(op){
+    let tela_conta = document.getElementById("tela-conta").innerHTML;
+    let operadores = "+-*/."
+    let ultimoCaractere = tela_conta.slice(-1);
+
+    if (operadores.includes(ultimoCaractere) || tela_conta.length === 0){
+        alert("Operadores só podem ser colocados depois de números");
+    }else{
+    document.getElementById("tela-conta").innerHTML += op;
+    }
+}
+
+function inserirParenteses(){
+    let tela_conta = document.getElementById("tela-conta").innerHTML;
+    let parenteses = "(";
+
+    let abreParenteses = (tela_conta.match(/\(/g) || []).length
+    let fechaParenteses = (tela_conta.match(/\)/g) || []).length
+
+    if(abreParenteses > fechaParenteses){
+        parenteses = ")";
+    }
+    document.getElementById('tela-conta').innerHTML += parenteses;
 }
 
 function apagar(){
-    document.getElementById('resultado').innerHTML = document.getElementById('resultado').innerHTML.slice(0,-1);
+    document.getElementById('tela-conta').innerHTML = document.getElementById('tela-conta').innerHTML.slice(0, -1);
+}
+
+function limpar(){
+    document.getElementById('tela-conta').innerHTML = "";
 }
 
 function calcular(){
-    var resultado = document.getElementById('resultado').innerHTML;
-
-    if(resultado){
-
-        var resultadoCalculado = eval(resultado);
-
-        document.getElementById('resultado').innerHTML = resultadoCalculado;
-
-        var historico = document.getElementById('historico')
-        var novoItem = document.createElement('li')
-
-        novoItem.textContent = resultado + '=' + resultadoCalculado;
-        historico.appendChild(novoItem);
-    }
+    tela_conta = document.getElementById('tela-conta').innerHTML;
+    resultado = eval(tela_conta);
+    document.getElementById('resultado').innerHTML = resultado;
 }
-
-function mostrarBalao(){
-    var balao = document.getElementById('balao');
-
-    if(balao.style.display === 'none'){
-        balao.style.display = 'block';
-    }
-    else{
-        balao.style.display = 'none';
-    }
-}
-
