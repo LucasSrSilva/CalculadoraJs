@@ -17,7 +17,6 @@
     font-size: 25px;
     font-family: var(--fonte-principal);
     color: var(--cor-cinza);
-    text-align: end;
 }
 
 .calculadora__divisoria{
@@ -62,4 +61,40 @@
 }
 #igual:active, #limpar:active{
     background-color: var(--cor-azul-claro);
+}
+#resultado{
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+#resultado::-webkit-scrollbar{
+    height: 8px;
+    width: 10px;
+}
+#resultado::-webkit-scrollbar-track {
+    background-color: var(--cor-azul-escuro);
+    border-radius: 10px;
+}
+#resultado::-webkit-scrollbar-thumb{
+    background-color: var(--cor-azul-claro);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#tela-conta{
+    overflow-y: hidden;
+    overflow-x: auto;
+    direction: rtl;
+}
+#tela-conta::-webkit-scrollbar{
+    height: 8px;
+    width: 10px;
+}
+#tela-conta::-webkit-scrollbar-track {
+    background-color: var(--cor-azul-escuro);
+    border-radius: 10px;
+}
+#tela-conta::-webkit-scrollbar-thumb{
+    background-color: var(--cor-azul-claro);
+    border-radius: 10px;
+    cursor: pointer;
 }
