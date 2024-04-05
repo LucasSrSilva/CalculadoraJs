@@ -83,7 +83,6 @@
 #tela-conta{
     overflow-y: hidden;
     overflow-x: auto;
-    direction: rtl;
 }
 #tela-conta::-webkit-scrollbar{
     height: 8px;
@@ -97,4 +96,5 @@
     background-color: var(--cor-azul-claro);
     border-radius: 10px;
     cursor: pointer;
+    
 }
